@@ -5,10 +5,10 @@ namespace StudentMarkAutomation.Models
 {
     public class Student
     {
-        [Required,DisplayName("First Name")]
+        [Required, DisplayName("First Name")]
         public string FirstName { get; set; }
         
-        [Required,DisplayName("Last Name")]
+        [Required, DisplayName("Last Name")]
         public string LastName { get; set; }
         
         [Required, DisplayName("Roll No")]

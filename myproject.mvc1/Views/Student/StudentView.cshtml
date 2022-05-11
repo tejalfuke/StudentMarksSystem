@@ -8,14 +8,13 @@
          h1{
     	text-align: center;
     }
-    </style>
-   
+    </style>  
 </head>
 <h1 style="color:crimson">Student Mark Automation</h1>
 <hr />
 <style>
     body {
-        background-image: url(https://www.intechnic.com/hubfs/Blog/Featured%20Images/Color%20Accessibility%20%3F%20UX%20Best%20Practices%20for%20Using%20Color%20in%20Design.jpg);
+        background-image: url(https://c0.wallpaperflare.com/preview/534/41/125/school-books-young-adult-education.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -37,36 +36,54 @@
         var Physics = $('#Physics').val();
         var Chemistry = $('#Chemistry').val();
         var total = (parseFloat(Math) + parseFloat(Physics) + parseFloat(Chemistry));
-        alert(total); 
         var avg = total/3.0;
        $('#Average').val(avg);
     }
 </script>
-<h4 style="color:cadetblue">Please enter the Student Details:</h4>
+<h4 style="color:cadetblue">Student Information:</h4>
+
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <form asp-action="StudentView">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table align="center" width="205%" cellpadding="30" cellspacing="0" border="0">
+            <tr>
+            <td>
             <div class="form-group">
-                <label asp-for="FirstName"  style="color:black" class="control-label"></label>
+                <label asp-for="FirstName" style="color:black" class="control-label"></label>
                 <input asp-for="FirstName" class="form-control" type="text" name="FirstName" ng-model="FirstName" required/>
                 <span asp-validation-for="FirstName" class="text-danger" style="color:red" ng-show="myForm.FirstName.$dirty && myForm.FirstName.$invalid"></span>
             </div>
+            </td>
+            <td>
             <div class="form-group">
                 <label asp-for="LastName" style="color:black" class="control-label"></label>
                 <input asp-for="LastName" class="form-control" type="text" name="LastName" ng-model="LastName" required />
                 <span asp-validation-for="LastName" class="text-danger" style="color:red" ng-show="myForm.LastName.$dirty && myForm.LastName.$invalid"></span>
             </div>
+             </td>
+            </tr>
+            <tr>
+            <td>
             <div class="form-group">
                 <label asp-for="RollNo"style="color:black" class="control-label"></label>
                 <input asp-for="RollNo" class="form-control" type="text" name="RollNo" ng-model="RollNo" required  />
                 <span asp-validation-for="RollNo" class="text-danger" style="color:red" ng-show="myForm.RollNo.$dirty && myForm.RollNo.$invalid"></span>
             </div>
+            </td>
+            <td>
             <div class="form-group">
                 <label asp-for="Email" style="color:black" class="control-label"></label>
                 <input asp-for="Email" class="form-control" type="email" name="Email" ng-model="Email" required  />
                 <span asp-validation-for="Email" class="text-danger" style="color:red" ng-show="myForm.Email.$dirty && myForm.Email.$invalid"></span>
             </div>
+             </td>
+            </tr>
+          </table>           
+            <h4 style="color:indianred" >
+                Marks Obtained:
+                <hr />
+            </h4>       
             <div class="form-group">
                 <label asp-for="Math" style="color:black" class="control-label"></label>
                 <input asp-for="Math" class="form-control" type="number" name="Math" ng-model="Math" required />
@@ -86,16 +103,12 @@
                 <label asp-for="Average" style="color:black" class="control-label"></label>
                 <input asp-for="Average" class="form-control" readonly />
                 <span asp-validation-for="Average" class="text-danger"></span>
-            </div>
+            </div>                       
             <div class="form-group">
                 <input type="submit" value="Submit" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
