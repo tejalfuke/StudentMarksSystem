@@ -4,9 +4,16 @@
     ViewData["Title"] = "StudentView";
 }
 
-<h1>Student Mark Automation</h1>
+<h1 style="color:red">Student Mark Automation</h1>
+<style>
+    body {
+        background-image: url(https://t3.ftcdn.net/jpg/03/51/51/28/360_F_351512882_2kFH8IaSe4lyA7SXBLzEXyGKNEgbO1iH.jpg););
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 
-<h4>Student Details</h4>
+<h4 style="color:red">Student Details</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,38 +21,38 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <input asp-for="FirstName" class="form-control" type="text" name="FirstName" ng-model="FirstName" required/>
+                <span asp-validation-for="FirstName" class="text-danger" style="color:red" ng-show="myForm.FirstName.$dirty && myForm.FirstName.$invalid"></span>
             </div>
             <div class="form-group">
                 <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+                <input asp-for="LastName" class="form-control" type="text" name="LastName" ng-model="LastName" required />
+                <span asp-validation-for="LastName" class="text-danger" style="color:red" ng-show="myForm.LastName.$dirty && myForm.LastName.$invalid"></span>
             </div>
             <div class="form-group">
                 <label asp-for="RollNo" class="control-label"></label>
-                <input asp-for="RollNo" class="form-control" />
-                <span asp-validation-for="RollNo" class="text-danger"></span>
+                <input asp-for="RollNo" class="form-control" type="text" name="RollNo" ng-model="RollNo" required  />
+                <span asp-validation-for="RollNo" class="text-danger" style="color:red" ng-show="myForm.RollNo.$dirty && myForm.RollNo.$invalid"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <input asp-for="Email" class="form-control" type="email" name="Email" ng-model="Email" required  />
+                <span asp-validation-for="Email" class="text-danger" style="color:red" ng-show="myForm.Email.$dirty && myForm.Email.$invalid"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Math" class="control-label"></label>
-                <input asp-for="Math" class="form-control" />
-                <span asp-validation-for="Math" class="text-danger"></span>
+                <input asp-for="Math" class="form-control" type="number" name="Math" ng-model="Math" required />
+                <span asp-validation-for="Math" class="text-danger" style="color:red" ng-show="myForm.Math.$dirty && myForm.Math.$invalid"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Physics" class="control-label"></label>
-                <input asp-for="Physics" class="form-control" />
-                <span asp-validation-for="Physics" class="text-danger"></span>
+                <input asp-for="Physics" class="form-control"  type="number" name="Physics" ng-model="Physics" required />
+                <span asp-validation-for="Physics" class="text-danger" style="color:red" ng-show="myForm.Physics.$dirty && myForm.Physics.$invalid"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Chemistry" class="control-label"></label>
-                <input asp-for="Chemistry" class="form-control" />
-                <span asp-validation-for="Chemistry" class="text-danger"></span>
+                <input asp-for="Chemistry" class="form-control" type="number" name="Chemistry" ng-model="Chemistry" required  />
+                <span asp-validation-for="Chemistry" class="text-danger" style="color:red" ng-show="myForm.Chemistry.$dirty && myForm.Chemistry.$invalid"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Average" class="control-label"></label>

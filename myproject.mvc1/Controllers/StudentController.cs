@@ -21,14 +21,14 @@ namespace StudentMarkAutomation.Controllers
         {
             return View();
         }
-        public ActionResult Create()
+        public ActionResult StudentView()
         {
-            return View(new StudentController());
+            return View(new Student());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(StudentController student)
+        public ActionResult StudentView(Student student)
         {
             try
             {

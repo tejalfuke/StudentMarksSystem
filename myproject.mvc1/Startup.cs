@@ -50,7 +50,7 @@ namespace StudentMarkAutomation
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=StudentController}/{action=StudentView}/{id?}");
+                    pattern: "{controller=Student}/{action=StudentView}/{id?}");
             });
         }
     }

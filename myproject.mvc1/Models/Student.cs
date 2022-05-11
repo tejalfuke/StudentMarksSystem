@@ -1,20 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentMarkAutomation.Models
 {
     public class Student
     {
-        [Required]
+        [Required,DisplayName("First Name")]
         public string FirstName { get; set; }
         
-        [Required]
+        [Required,DisplayName("Last Name")]
         public string LastName { get; set; }
         
-        [Required]
+        [Required, DisplayName("Roll No")]
         [Key]
-        public int RollNo { get; set; }
+        public string RollNo { get; set; }
         
-        [Required]
+        [Required, DisplayName("Email Id")]
         [EmailAddress]
         public string Email { get; set; }
 
@@ -26,6 +27,6 @@ namespace StudentMarkAutomation.Models
         
         [Required]
         public int Chemistry { get; set; }
-        public float Average { get => (Math + Physics + Chemistry) / 3; }
+        public float Average { get => (Math + Physics + Chemistry) / 3;}
     }
 }
