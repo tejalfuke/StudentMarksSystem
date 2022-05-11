@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace myproject.mvc1
+namespace StudentMarkAutomation
 {
     public class Startup
     {
@@ -50,7 +50,7 @@ namespace myproject.mvc1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Employee}/{action=EmployeeView2}/{id?}");
+                    pattern: "{controller=StudentController}/{action=StudentView}/{id?}");
             });
         }
     }

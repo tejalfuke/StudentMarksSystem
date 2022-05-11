@@ -33,7 +33,7 @@ namespace StudentMarkAutomation.Controllers
             try
             {
                 string attendStr = Newtonsoft.Json.JsonConvert.SerializeObject(student);
-                string conStr = "DefaultEndpointsProtocol=https;AccountName=nitishstorage;AccountKey=GWi/QpUySz0bu296Zb/lNwTMKeavzOIoGPK8OlVIx2vZFD3kic8LM2AbyYqZZuPahi452qy8i8XDjxWE+A7eVQ==;EndpointSuffix=core.windows.net";
+                string conStr = "DefaultEndpointsProtocol=https;AccountName=usethisforeverything;AccountKey=LIYwSchOA18OsJHB7dXL5hjuojyRYTlim3WG7GqSNWJdehPm5z1xE5ipy/HA/CpERYfDQ7DtkrWW/JqdM2OQHA==;EndpointSuffix=core.windows.net";
 
                 try
                 {
