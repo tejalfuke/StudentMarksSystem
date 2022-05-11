@@ -1,0 +1,68 @@
+﻿@model StudentMarkAutomation.Models.Student
+
+@{
+    ViewData["Title"] = "StudentView";
+}
+
+<h1>StudentView</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="StudentView">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RollNo" class="control-label"></label>
+                <input asp-for="RollNo" class="form-control" />
+                <span asp-validation-for="RollNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Math" class="control-label"></label>
+                <input asp-for="Math" class="form-control" />
+                <span asp-validation-for="Math" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Physics" class="control-label"></label>
+                <input asp-for="Physics" class="form-control" />
+                <span asp-validation-for="Physics" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemistry" class="control-label"></label>
+                <input asp-for="Chemistry" class="form-control" />
+                <span asp-validation-for="Chemistry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Average" class="control-label"></label>
+                <input asp-for="Average" class="form-control" />
+                <span asp-validation-for="Average" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
