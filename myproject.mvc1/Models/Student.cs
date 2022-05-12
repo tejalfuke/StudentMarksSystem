@@ -11,22 +11,24 @@ namespace StudentMarkAutomation.Models
         [Required, DisplayName("Last Name")]
         public string LastName { get; set; }
         
-        [Required, DisplayName("Roll No")]
+        [Required, DisplayName("Roll Number")]
         [Key]
         public string RollNo { get; set; }
         
-        [Required, DisplayName("Email Id")]
+        [Required, DisplayName("Email Address")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
-        public int Math { get; set; }
+        public int Maths { get; set; }
         
         [Required]
         public int Physics { get; set; }
         
         [Required]
         public int Chemistry { get; set; }
-        public float Average { get => (Math + Physics + Chemistry) / 3;}
+
+        [DisplayName("Average Marks")]
+        public float Average { get => (Maths + Physics + Chemistry) / 3;}
     }
 }
