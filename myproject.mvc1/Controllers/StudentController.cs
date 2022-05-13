@@ -38,7 +38,7 @@ namespace StudentMarkAutomation.Controllers
                 try
                 {
                     UploadBlob(conStr, attendStr, "testing", true);
-                    ViewBag.MessageToScreent = "Details Updated to Blob :" + attendStr;
+                    ViewBag.MessageToScreent = "Details Got updated";
                 }
                 catch (Exception ex)
                 {
@@ -106,7 +106,7 @@ namespace StudentMarkAutomation.Controllers
             var serviceClient = new BlobServiceClient(conStr);
             var containerClient = serviceClient.GetBlobContainerClient(containerName);
 
-            fileName = "data.txt";
+            fileName = "student data.txt";
             existingContent = "";
             blobClient = containerClient.GetBlobClient(fileName);
         }
