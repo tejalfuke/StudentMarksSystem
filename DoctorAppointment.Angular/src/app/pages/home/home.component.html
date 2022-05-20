@@ -1,0 +1,48 @@
+<div class="banner">
+  <div class="content">
+    <h1 class="mb-5">Find A Doctor Today And Make Appointment Now</h1>
+    <a routerLink="login">Book Appointment Now <i class="bi bi-arrow-right"></i></a>
+  </div>
+
+</div>
+<div class="container mt-5 mb-5">
+  <h1 class="text-center">Easy way to Book An Appointment</h1>
+  <div class="row mt-5">
+    <!--one-->
+   <div class="col-lg-4 mt-2">
+     <div class="stepbox">
+       <h1>1</h1>
+       <p>Choose specialization</p>
+     </div>
+   </div>
+   <!--two-->
+   <div class="col-lg-4 mt-2">
+    <div class="stepbox">
+      <h1>2</h1>
+      <p>Check For Availability</p>
+    </div>
+  </div>
+  <!--three-->
+  <div class="col-lg-4 mt-2">
+    <div class="stepbox">
+      <h1>3</h1>
+      <p>Book Your Slot Now</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!--DoctorBox-->
+<div class="container mt-4 mb-4">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="doctorbox" *ngFor="let dr of doctorData">
+        <img src="{{dr.doctorImg}}">
+        <h1>{{dr.doctorName}}</h1>
+        <p>
+          {{dr.ConsultanceFee}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

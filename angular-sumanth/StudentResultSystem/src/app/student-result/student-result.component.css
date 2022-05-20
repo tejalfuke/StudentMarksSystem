@@ -1,0 +1,15 @@
+.card
+{
+
+  border:lightgreen;
+  width:600px;
+  padding:10px;
+  position:absolute;
+  left: 380px;
+  bottom:80px;
+  right: 160px;
+
+
+   background:rgb(204, 238, 247);
+  
+}

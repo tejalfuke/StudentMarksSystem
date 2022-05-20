@@ -1,0 +1,134 @@
+<div class="container ">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 border p-4 shadow bg-light">
+       <div class="col-6">
+        <h3 class="fw-normal text-secondary fs-4 text-uppercase mb-4">
+          Appointment form
+        </h3>
+      </div>
+
+
+
+
+
+      <form [formGroup]="appointmentForm">
+        <!-- <div class="row g-3">  -->
+          <!-- firstname  -->
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="firstname"
+              class="form-control"
+              placeholder="First Name"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['firstname']?.touched ">
+            <div *ngIf="f?.['firstname']?.errors?.['required']">
+              *First Name is required
+            </div>
+          </div>
+          <!-- lastname  -->
+
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="lastname"
+              class="form-control"
+              placeholder="Last Name"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['lastname']?.touched ">
+            <div *ngIf="f?.['lastname']?.errors?.['required']">
+              *Last Name is required
+            </div>
+          </div>
+
+          <!-- phone  -->
+          <div class="mb-2">
+            <input
+              type="tel"
+              formControlName="mobile"
+              class="form-control"
+              placeholder="Phone Number"
+            />
+          </div>
+          <!-- validation  -->
+
+          <div class="text-danger" *ngIf=" f?.['mobile']?.touched">
+            <div *ngIf="f?.['mobile']?.errors?.['required']">
+              Mobile No. is required
+            </div>
+            <div *ngIf="f?.['mobile']?.errors?.['pattern']">
+              Enter valid Mobile No.
+            </div>
+          </div>
+
+          <!-- email  -->
+
+          <div class="mb-2">
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['email']?.touched ">
+            <div *ngIf="f?.['email']?.errors?.['required']">
+              Email id is required
+            </div>
+            <div *ngIf="f?.['email']?.errors?.['email']">
+              Enter valid Email Id
+            </div>
+          </div>
+             <!-- date  -->
+          <div class="mb-2">
+            <input
+              type="date"
+              formControlName="date"
+              class="form-control"
+              placeholder="Enter Date"
+            />
+          </div>
+              <!-- validation  -->
+              <div class="text-danger" *ngIf=" f?.['date']?.touched ">
+                <div *ngIf="f?.['date']?.errors?.['required']">
+                  *Date is required
+                </div>
+              </div>
+              <!-- time  -->
+          <div class="mb-2">
+            <input
+              type="time"
+              formControlName="time"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['time']?.touched ">
+            <div *ngIf="f?.['time']?.errors?.['required']">
+              *Time is required
+            </div>
+          </div>
+
+          <div class="col-12 mt-5">
+            <button routerLink="/" routerLinkActive="active" type="submit" [disabled]="!appointmentForm.valid" class="first btn-primary " onclick="alert('Successfully Booked!')">
+              Book Appointment
+            </button>
+            <button
+              type="button" routerLink="/search" routerLinkActive="active"
+              class="btn btn-outline-secondary float-end me-2" onclick="alert('Appointment Cancelled')"
+            >
+              Cancel
+            </button>
+          </div>
+        <!-- </div> -->
+      </form>
+    </div>
+  </div>
+ </div>

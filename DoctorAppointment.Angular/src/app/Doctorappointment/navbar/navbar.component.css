@@ -1,0 +1,16 @@
+.navbar-light{
+  background: rgb(121, 185, 201);
+  padding:20px 10px;
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+  color:var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: rgb(209, 219, 146);
+}
+.navbar-light .navbar-nav .nav-link
+{
+  color:var(--secondary-color);
+  font-weight: bold;
+}

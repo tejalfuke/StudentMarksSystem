@@ -1,0 +1,21 @@
+.card
+{
+
+  border:none;
+  width:900px;
+  padding:20px;
+  position:absolute;
+  top:100px;
+
+
+  background:hsla(205, 46%, 30%, 1);
+  background:linear-gradient(90deg,hsla(205,46%,30%,1 ) 0%, hsla(260,29%,36%,1) 100%);
+}
+.card h1,h6
+{
+  color:aliceblue;
+}
+label{
+  color:aliceblue;
+}
+

@@ -1,0 +1,62 @@
+.banner
+{
+  background-image:url('../../../assets/img/bannerimg.jpg') ;
+  height:1000px;
+  background-position: center top;
+  background-size: cover;
+
+}
+.content
+{
+  top:30%;
+  left:20%;
+  position:absolute;
+}
+.content h1
+{
+  color:#fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+.content a
+{
+  text-decoration: none;
+  background-color:#fff ;
+  color:rgb(218, 68, 45);
+  padding:10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.content a:hover
+{
+  background-color: rgb(178, 47, 14);
+  color:#fff;
+}
+.stepbox
+{
+  background-color: rgb(31, 178, 218);
+  padding: 10px 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.stepbox h1{
+  font-size: 50px;
+  font-weight: bold;
+  color:aquamarine;
+
+}
+.stepbox p
+{
+  font-size: 20px ;
+  color: #fff;
+}
+.doctorbox
+{
+  padding:5px 5px;
+}
+.doctorbox img{
+  width:100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
